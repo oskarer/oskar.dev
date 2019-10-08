@@ -1,0 +1,27 @@
+@charset "utf-8";
+// If need, change your variables before importing Bulma
+$title-color: #ff0000;
+@import "~bulma/bulma.sass";
+
+.timeline {
+  position: relative;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px black solid;
+  width: 20px;
+  top: 15px;
+  left: calc(50% - 10px);
+  // transform: translateX(calc(100% + 40px)) translateY(20px);
+}
+
+.timeline:after {
+  content: "";
+  position: absolute;
+  border-right: 1px black solid;
+  height: 100%;
+  width: 100%;
+  transform: translateX(-50%);
+}
