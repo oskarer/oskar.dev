@@ -18,19 +18,23 @@ const IndexPage = () => (
       </div>
     </section>
     <section className="section info">
-      <div className="container is-narrow has-text-centered">
-        <h4 className="title is-4 has-text-light">Nice to meet you!</h4>
-        <h5 className="subtitle is-5 has-text-light">
-          I really enjoy building great apps, maybe we can work together?
-        </h5>
-        <p className="has-text-light">
-          During the last years I have worked remotely on several frontend web
-          projects. I'm comfortable taking responsibility and ownership of a
-          project, finding the right tools for the job and turning requirements
-          into a good user experience. While I'm not a designer myself I can
-          quite easily take an rough design idea and turn it into something
-          complete.
-        </p>
+      <div className="container has-text-centered">
+        <div className="columns is-centered">
+          <div className="column is-three-fifths">
+            <h4 className="title is-4 has-text-light">Nice to meet you!</h4>
+            <h5 className="subtitle is-5 has-text-light">
+              I really enjoy building great apps, maybe we can work together?
+            </h5>
+            <p className="has-text-light">
+              During the last years I have worked remotely on several frontend
+              web projects. I'm comfortable taking responsibility and ownership
+              of a project, finding the right tools for the job and turning
+              requirements into a good user experience. While I'm not a designer
+              myself I can quite easily take an rough design idea and turn it
+              into something complete.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <section className="section">

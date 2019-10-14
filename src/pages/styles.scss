@@ -34,7 +34,7 @@ $dark-background: #413756;
 
 .info {
   background: $dark-background;
-  padding: 5rem 1.5rem 18rem 1.5rem;
+  padding: 7rem 1.5rem 20rem 1.5rem;
 }
 
 .info .subtitle {
@@ -101,6 +101,10 @@ $timelineStepOffset: 1.5rem;
 
 .facts:last-child {
   margin-bottom: 2rem;
+}
+
+.footer {
+  padding: 6rem 1.5rem;
 }
 
 .footer p {
