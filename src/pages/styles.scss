@@ -1,27 +1,116 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
-$title-color: #ff0000;
+// $primary: $red;
+$family-sans-serif: "Lato";
+$box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
+$box-padding: 3rem 1.25rem;
+
 @import "~bulma/bulma.sass";
+
+$light-background: #01cea7;
+$dark-background: #413756;
+
+/* Bulma styles */
+
+.container.is-narrow {
+  max-width: 1200px;
+}
+
+/* End of Bulma styles */
+
+/* General styles */
+.has-dark-color {
+  color: $dark-background;
+}
+/* End of general styles */
 
 .timeline {
   position: relative;
 }
 
+.hero {
+  background: $light-background;
+}
+
+.info {
+  background: $dark-background;
+  padding: 5rem 1.5rem 18rem 1.5rem;
+}
+
+.info .subtitle {
+  margin-bottom: 3rem;
+}
+
+.entry:first-of-type {
+  margin-top: 3rem;
+}
+
+.entry p {
+  margin-bottom: 2.5rem;
+}
+
+$timelineStepWidth: 30px;
+$timelineStepOffset: 1.5rem;
+
 .timeline:before {
+  @extend .is-hidden-mobile;
   content: "";
   position: absolute;
-  border-bottom: 1px black solid;
-  width: 20px;
-  top: 15px;
-  left: calc(50% - 10px);
-  // transform: translateX(calc(100% + 40px)) translateY(20px);
+  border-bottom: 1px $grey-light solid;
+  width: $timelineStepWidth;
+  top: $timelineStepOffset;
+  // left: calc(50% - #{$timelineStepWidth / 2});
+  left: calc(50% - 1px);
 }
 
 .timeline:after {
+  @extend .is-hidden-mobile;
   content: "";
   position: absolute;
-  border-right: 1px black solid;
+  border-right: 1px $grey-light solid;
   height: 100%;
   width: 100%;
   transform: translateX(-50%);
+}
+
+.timeline-container {
+  margin-top: -15rem;
+  background: white;
+}
+
+.timeline-container > div:first-of-type .timeline:after {
+  height: calc(100% - $timelineStepOffset);
+  top: $timelineStepOffset;
+}
+
+.timeline-container > div:last-of-type .timeline:after {
+  height: calc(100% - 0.75rem);
+}
+
+.timeline-container .image {
+  margin: 0 auto;
+}
+
+.footer {
+  background: $dark-background;
+}
+
+.facts {
+  margin: 3rem 0;
+}
+
+.facts:last-child {
+  margin-bottom: 2rem;
+}
+
+.footer p {
+  margin-bottom: 2rem;
+}
+
+.footer .image {
+  margin: 1rem auto 3rem auto;
+}
+
+.footer img {
+  @extend .is-rounded;
 }
