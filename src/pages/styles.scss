@@ -79,7 +79,7 @@ $timelineStepOffset: 1.5rem;
 }
 
 .timeline-container > div:first-of-type .timeline:after {
-  height: calc(100% - $timelineStepOffset);
+  height: calc(100% - #{$timelineStepOffset});
   top: $timelineStepOffset;
 }
 
