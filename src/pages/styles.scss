@@ -1,19 +1,39 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
 // $primary: $red;
-$family-sans-serif: "Lato";
+$family-sans-serif: "Muli";
 $box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
 $box-padding: 3rem 1.25rem;
 
 @import "~bulma/bulma.sass";
 
-$light-background: #01cea7;
-$dark-background: #413756;
+$light-background: #a3c5d2;
+$dark-background: #1a434d;
+$pop-color: #d47b29;
 
 /* Bulma styles */
 
 .container.is-narrow {
   max-width: 1200px;
+}
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Heebo";
+  font-weight: 900;
+}
+
+.subtitle {
+  font-weight: 400;
+}
+
+a {
+  color: $pop-color;
 }
 
 /* End of Bulma styles */
@@ -59,7 +79,6 @@ $timelineStepOffset: 1.5rem;
   border-bottom: 1px $grey-light solid;
   width: $timelineStepWidth;
   top: $timelineStepOffset;
-  // left: calc(50% - #{$timelineStepWidth / 2});
   left: calc(50% - 1px);
 }
 
@@ -68,6 +87,7 @@ $timelineStepOffset: 1.5rem;
   content: "";
   position: absolute;
   border-right: 1px $grey-light solid;
+  top: $timelineStepOffset;
   height: 100%;
   width: 100%;
   transform: translateX(-50%);

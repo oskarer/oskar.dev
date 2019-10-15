@@ -12,8 +12,8 @@ const IndexPage = () => (
     <section className="hero is-fullheight">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title is-2">Hi! I'm Oskar</h1>
-          <h2 className="subtitle is-4">I engineer frontend applications</h2>
+          <h1 className="title is-1">Hi! I'm Oskar</h1>
+          <h2 className="subtitle is-3">I engineer frontend applications</h2>
         </div>
       </div>
     </section>
@@ -21,10 +21,9 @@ const IndexPage = () => (
       <div className="container has-text-centered">
         <div className="columns is-centered">
           <div className="column is-three-fifths">
-            <h4 className="title is-4 has-text-light">Nice to meet you!</h4>
-            <h5 className="subtitle is-5 has-text-light">
+            <h4 className="title is-4 has-text-light">
               I really enjoy building great apps, maybe we can work together?
-            </h5>
+            </h4>
             <p className="has-text-light">
               During the last years I have worked remotely on several frontend
               web projects. I'm comfortable taking responsibility and ownership
@@ -39,10 +38,14 @@ const IndexPage = () => (
     </section>
     <section className="section">
       <div className="container is-narrow timeline-container box">
-        <h1 className="title is-4 has-text-centered experience-title">
-          4+ years experience building frontend apps that are well-tested and
-          maintainable
-        </h1>
+        <div className="columns is-centered" style={{ margin: "0 0 3rem 0" }}>
+          <div className="column is-three-fifths">
+            <h1 className="subtitle is-3 has-text-centered experience-title">
+              4+ years experience building frontend apps that are well-tested
+              and maintainable
+            </h1>
+          </div>
+        </div>
         <TimelineEntry
           time="2017-2019"
           title="Cryptocurrency exchange"
@@ -81,7 +84,7 @@ const IndexPage = () => (
             </figure>
           }
           time="2010-2015"
-          title="Linköping university"
+          title="Linköping University"
           text="MSc in Computer Science with focus on software/web development."
         />
       </div>
@@ -93,25 +96,19 @@ const IndexPage = () => (
           <div className="column is-4 is-offset-2">
             <h5 className="title is-6">Personal</h5>
             <div className="content">
-              <ul>
-                <li>27 years old</li>
-                <li>I live in Sweden</li>
-                <li>Enjoys nature</li>
-                <li>Part-time vanlifer</li>
-              </ul>
+              <p>27 years old</p>
+              <p>I live in Sweden</p>
+              <p>Enjoys nature</p>
+              <p>Part-time vanlifer</p>
             </div>
           </div>
           <div className="column is-4">
             <h5 className="title is-6">Code</h5>
             <div className="content">
-              <ul>
-                <li>Longtime (in Javascript-time) React developer</li>
-                <li>I think tests are important</li>
-                <li>Performance junkie</li>
-                <li>
-                  Really excited about blockchain tech and decentralization
-                </li>
-              </ul>
+              <p>Longtime (in Javascript-time) React developer</p>
+              <p>I think tests are important</p>
+              <p>Performance junkie</p>
+              <p>Really excited about blockchain tech and decentralization</p>
             </div>
           </div>
         </div>

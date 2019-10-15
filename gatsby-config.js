@@ -33,8 +33,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Lato`,
+            family: `Muli`,
             variants: [`400`, `700`],
+          },
+          {
+            family: `Heebo`,
+            variants: [`400`, `900`],
           },
         ],
       },
