@@ -36,6 +36,10 @@ a {
   color: $pop-color;
 }
 
+a:hover {
+  color: whitesmoke;
+}
+
 /* End of Bulma styles */
 
 /* General styles */
@@ -121,6 +125,18 @@ $timelineStepOffset: 1.5rem;
 
 .facts:last-child {
   margin-bottom: 2rem;
+}
+
+.facts img {
+  height: 25px !important;
+  width: 25px !important;
+  margin: 0 10px 0 0 !important;
+}
+
+.facts p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {

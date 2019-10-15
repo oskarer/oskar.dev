@@ -1,5 +1,6 @@
 import React from "react"
 import "./styles.scss"
+import { Emojione } from "react-emoji-render"
 
 import TimelineEntry from "../components/TimelineEntry"
 import Samly from "../components/Samly"
@@ -92,23 +93,41 @@ const IndexPage = () => (
     <section className="section">
       <div className="container is-narrow">
         <h2 className="title has-text-centered">Quick facts about me</h2>
-        <div className="columns facts">
-          <div className="column is-4 is-offset-2">
-            <h5 className="title is-6">Personal</h5>
+        <div className="columns is-centered facts">
+          <div className="column is-3 has-text-centered">
+            {/*<h5 className="title is-6">Personal</h5>*/}
             <div className="content">
-              <p>27 years old</p>
-              <p>I live in Sweden</p>
-              <p>Enjoys nature</p>
-              <p>Part-time vanlifer</p>
+              <p>
+                <Emojione text=":older_man:" /> 27 years old
+              </p>
+              <p>
+                <Emojione text=":snowman:" /> I live in Sweden
+              </p>
+              <p>
+                <Emojione text=":deciduous_tree:" /> Enjoys nature
+              </p>
+              <p>
+                <Emojione text=":minibus:" /> Part-time vanlifer
+              </p>
             </div>
           </div>
-          <div className="column is-4">
-            <h5 className="title is-6">Code</h5>
+          <div className="column is-3 is-offset-1 has-text-centered">
+            {/*<h5 className="title is-6">Code</h5>*/}
             <div className="content">
-              <p>Longtime (in Javascript-time) React developer</p>
-              <p>I think tests are important</p>
-              <p>Performance junkie</p>
-              <p>Really excited about blockchain tech and decentralization</p>
+              <p>
+                <Emojione text=":rocket:" /> Longtime (in Javascript-time) React
+                developer
+              </p>
+              <p>
+                <Emojione text=":bomb:" /> I think tests are important
+              </p>
+              <p>
+                <Emojione text=":zap:" /> Performance junkie
+              </p>
+              <p>
+                <Emojione text=":chart_with_downwards_trend:" /> Really excited
+                about blockchain tech and decentralization
+              </p>
             </div>
           </div>
         </div>
