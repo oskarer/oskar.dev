@@ -2,6 +2,7 @@ import React from "react"
 import "./styles.scss"
 import { Emojione } from "react-emoji-render"
 
+import Seo from "../components/Seo"
 import TimelineEntry from "../components/TimelineEntry"
 import Samly from "../components/Samly"
 import Infor from "../components/Infor"
@@ -10,6 +11,7 @@ import Me from "../components/Me"
 
 const IndexPage = () => (
   <>
+    <Seo />
     <section className="hero is-fullheight">
       <div className="hero-body">
         <div className="container">
