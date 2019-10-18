@@ -11,7 +11,7 @@ import Me from "../components/Me"
 
 const IndexPage = () => (
   <>
-    <Seo />
+    <Seo title="Home" />
     <section className="hero is-fullheight">
       <div className="hero-body">
         <div className="container">
