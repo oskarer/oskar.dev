@@ -49,6 +49,7 @@ module.exports = {
         trackingId: "UA-150402189-1",
       },
     },
+    `gatsby-plugin-preload-fonts`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
