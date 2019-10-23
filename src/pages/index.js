@@ -3,6 +3,7 @@ import "./styles.scss"
 import { Emojione } from "react-emoji-render"
 
 import Seo from "../components/Seo"
+import Front from "../components/Front"
 import TimelineEntry from "../components/TimelineEntry"
 import Samly from "../components/Samly"
 import Infor from "../components/Infor"
@@ -18,6 +19,9 @@ const IndexPage = () => (
           <h1 className="title is-1">Hi! I'm Oskar</h1>
           <h2 className="subtitle is-3">I engineer frontend applications</h2>
         </div>
+      </div>
+      <div className="hero-foot">
+        <Front />
       </div>
     </section>
     <section className="section info">
