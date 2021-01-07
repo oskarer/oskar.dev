@@ -1,6 +1,6 @@
 import Helmet from "react-helmet"
-import { Emojione } from "react-emoji-render"
 
+import Emoji from "./components/Emoji"
 import TimelineEntry from "./components/TimelineEntry"
 
 import frontImage from "./images/front.png"
@@ -145,16 +145,16 @@ function App() {
               {/*<h5 className="title is-6">Personal</h5>*/}
               <div className="content">
                 <p>
-                  <Emojione text=":older_man:" /> 27 years old
+                  <Emoji text=":older_man:" /> 27 years old
                 </p>
                 <p>
-                  <Emojione text=":snowman:" /> I live in Sweden
+                  <Emoji text=":snowman:" /> I live in Sweden
                 </p>
                 <p>
-                  <Emojione text=":deciduous_tree:" /> Enjoys nature
+                  <Emoji text=":deciduous_tree:" /> Enjoys nature
                 </p>
                 <p>
-                  <Emojione text=":minibus:" /> Part-time vanlifer
+                  <Emoji text=":minibus:" /> Part-time vanlifer
                 </p>
               </div>
             </div>
@@ -162,18 +162,18 @@ function App() {
               {/*<h5 className="title is-6">Code</h5>*/}
               <div className="content">
                 <p>
-                  <Emojione text=":rocket:" /> Longtime (in Javascript-time)
-                  React developer
+                  <Emoji text=":rocket:" /> Longtime (in Javascript-time) React
+                  developer
                 </p>
                 <p>
-                  <Emojione text=":bomb:" /> I think tests are important
+                  <Emoji text=":bomb:" /> I think tests are important
                 </p>
                 <p>
-                  <Emojione text=":zap:" /> Performance junkie
+                  <Emoji text=":zap:" /> Performance junkie
                 </p>
                 <p>
-                  <Emojione text=":chart_with_downwards_trend:" /> Really
-                  excited about blockchain tech and decentralization
+                  <Emoji text=":chart_with_downwards_trend:" /> Really excited
+                  about blockchain tech and decentralization
                 </p>
               </div>
             </div>
