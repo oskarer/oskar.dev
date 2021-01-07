@@ -1,6 +1,3 @@
-import React from "react"
-import "../pages/styles.scss"
-
 const TimelineEntry = ({ image, time, title, text }) => (
   <div className="columns entry">
     <div className="column is-4 is-offset-1">{image}</div>
