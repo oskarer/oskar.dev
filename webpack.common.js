@@ -9,6 +9,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
   .default;
 
+let BundleAnalyzerPlugin;
+if (process.env.ANALYZE) {
+  BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+    .BundleAnalyzerPlugin;
+}
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -57,7 +63,7 @@ module.exports = {
     new PurgecssPlugin({
       paths: [...glob.sync('./src/**/**/*', { nodir: true })],
     }),
-  ],
+  ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
   devServer: {
     contentBase: './build',
     hot: true,

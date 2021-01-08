@@ -50,7 +50,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --env.env=dev",
     "build": "webpack --config webpack.config.js --env.env=prod",
-    "analyze": "build --stats && webpack-bundle-analyzer ./build/bundle-stats.json",
+    "analyze": "ANALYZE=1 yarn build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "eslintConfig": {
