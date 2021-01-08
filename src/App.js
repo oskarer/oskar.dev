@@ -13,7 +13,9 @@ import FrontImage from './images/front.svg';
 
 import './styles.scss';
 
-const Age = React.lazy(() => import('./components/Age'));
+const Age = React.lazy(() =>
+  import(/* webpackChunkName: 'age' */ './components/Age'),
+);
 
 function App() {
   return (

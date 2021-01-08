@@ -65,6 +65,13 @@ module.exports = {
     }),
     new PreloadWebpackPlugin({
       rel: 'prefetch',
+      include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as: 'font',
+      include: 'allAssets',
+      fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
     }),
     new HTMLInlineCSSWebpackPlugin(),
     new CleanWebpackPlugin(),

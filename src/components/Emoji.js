@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react';
 
-const Emojione = React.lazy(() => import('../utils/emojione'));
+const Emojione = React.lazy(() =>
+  import(/* webpackChunkName: 'emojione' */ '../utils/emojione'),
+);
 
 const Emoji = ({ text }) => (
   <Suspense fallback={<></>}>
