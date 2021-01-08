@@ -1,3 +1,4 @@
+import React, { Suspense } from "react"
 import Helmet from "react-helmet"
 
 import Emoji from "./components/Emoji"
@@ -7,8 +8,10 @@ import frontImage from "./images/front.png"
 import samlyImage from "./images/samly.png"
 import inforImage from "./images/infor.png"
 import liuImage from "./images/liu.png"
-import meImage from "./images/me.jpg"
+import meImage from "./images/me.png"
 import "./styles.scss"
+
+const Age = React.lazy(() => import("./components/Age"))
 
 function App() {
   return (
@@ -145,7 +148,11 @@ function App() {
               {/*<h5 className="title is-6">Personal</h5>*/}
               <div className="content">
                 <p>
-                  <Emoji text=":older_man:" /> 27 years old
+                  <Emoji text=":older_man:" />
+                  <Suspense fallback={<></>}>
+                    <Age />
+                  </Suspense>{" "}
+                  years old
                 </p>
                 <p>
                   <Emoji text=":snowman:" /> I live in Sweden
