@@ -1,17 +1,29 @@
 @charset "utf-8";
-// If need, change your variables before importing Bulma
-// $primary: $red;
-@use "~inter-ui/default" as inter-ui with (
-    $inter-font-path: "~inter-ui/Inter (web latin)"
-);
-@include inter-ui.weight-400;
-@include inter-ui.weight-900;
 
-$family-sans-serif: "Inter";
+$inter-font-path: '~inter-ui/Inter (web latin)';
+$inter-font-display: swap;
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: $inter-font-display;
+  src: url('#{$inter-font-path}/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: $inter-font-display;
+  src: url('#{$inter-font-path}/Inter-Black.woff2') format('woff2');
+}
+
+$family-sans-serif: 'Inter';
 $box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
 $box-padding: 3rem 1.25rem;
 
-@import "~bulma/bulma.sass";
+@import '~bulma/bulma.sass';
 
 $light-background: #a3c5d2;
 $dark-background: #1a434d;
@@ -30,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 900;
 }
 
@@ -94,7 +106,7 @@ $timelineStepOffset: 1.5rem;
 
 .timeline:before {
   @extend .is-hidden-mobile;
-  content: "";
+  content: '';
   position: absolute;
   border-bottom: 1px $grey-light solid;
   width: $timelineStepWidth;
@@ -104,7 +116,7 @@ $timelineStepOffset: 1.5rem;
 
 .timeline:after {
   @extend .is-hidden-mobile;
-  content: "";
+  content: '';
   position: absolute;
   border-right: 1px $grey-light solid;
   top: $timelineStepOffset;
