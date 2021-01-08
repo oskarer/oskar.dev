@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -55,11 +56,24 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin(),
+    new HtmlCriticalWebpackPlugin({
+      base: path.resolve(__dirname, 'build'),
+      src: 'index.html',
+      dest: 'index.html',
+      inline: true,
+      minify: true,
+      extract: true,
+      width: 375,
+      height: 565,
+      penthouse: {
+        blockJSRequests: false,
+      },
     }),
     new PreloadWebpackPlugin({
       rel: 'prefetch',
