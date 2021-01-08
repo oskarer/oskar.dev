@@ -8,7 +8,6 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
   .default;
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -34,12 +33,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|webp|jpg|jpeg|gif)$/i,
         loader: 'file-loader',
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader?name=[name].[ext]',
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
     ],
   },
@@ -64,7 +67,6 @@ module.exports = {
     new PurgecssPlugin({
       paths: [...glob.sync('./src/**/**/*', { nodir: true })],
     }),
-    new ImageminWebpWebpackPlugin(),
   ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
   devServer: {
     contentBase: './build',

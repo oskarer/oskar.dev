@@ -4,11 +4,13 @@ import Helmet from 'react-helmet';
 import Emoji from './components/Emoji';
 import TimelineEntry from './components/TimelineEntry';
 
-import frontImage from './images/front.png';
-import samlyImage from './images/samly.png';
-import inforImage from './images/infor.png';
-import liuImage from './images/liu.png';
-import meImage from './images/me.png';
+import samlyImage from './images/samly.webp';
+import inforImage from './images/infor.webp';
+import liuImage from './images/liu.webp';
+import meImage from './images/me.webp';
+
+import FrontImage from './images/front.svg';
+
 import './styles.scss';
 
 const Age = React.lazy(() => import('./components/Age'));
@@ -67,7 +69,7 @@ function App() {
           </div>
         </div>
         <div className="hero-foot">
-          <img src={frontImage} alt="Hero" />
+          <FrontImage />
         </div>
       </section>
       <section className="section info">
