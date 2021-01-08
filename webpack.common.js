@@ -8,6 +8,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
   .default;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -63,6 +64,7 @@ module.exports = {
     new PurgecssPlugin({
       paths: [...glob.sync('./src/**/**/*', { nodir: true })],
     }),
+    new ImageminWebpWebpackPlugin(),
   ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
   devServer: {
     contentBase: './build',
