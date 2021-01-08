@@ -1,11 +1,13 @@
-import { DateTime } from "luxon"
+import React from 'react';
+import { DateTime } from 'luxon';
 
 function whatsMyAgeAgain() {
-  const diffYears = DateTime.fromISO("1991-12-05").diffNow("years").toObject()
-    .years
-  return Math.floor(Math.abs(diffYears))
+  const diffYears = DateTime.fromISO('1991-12-05')
+    .diffNow('years')
+    .toObject().years;
+  return Math.floor(Math.abs(diffYears));
 }
 
-const Age = () => <>{whatsMyAgeAgain()}</>
+const Age = () => <>{whatsMyAgeAgain()}</>;
 
-export default Age
+export default Age;
