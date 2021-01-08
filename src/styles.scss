@@ -1,7 +1,13 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
 // $primary: $red;
-$family-sans-serif: "Muli";
+@use "~inter-ui/default" as inter-ui with (
+    $inter-font-path: "~inter-ui/Inter (web latin)"
+);
+@include inter-ui.weight-400;
+@include inter-ui.weight-900;
+
+$family-sans-serif: "Inter";
 $box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #e6ecf8;
 $box-padding: 3rem 1.25rem;
 
@@ -24,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Heebo";
+  font-family: "Inter";
   font-weight: 900;
 }
 
