@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
   .default;
 
@@ -61,6 +62,9 @@ module.exports = {
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'prefetch',
     }),
     new HTMLInlineCSSWebpackPlugin(),
     new CleanWebpackPlugin(),
