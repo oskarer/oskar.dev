@@ -75,10 +75,10 @@ module.exports = {
         blockJSRequests: false,
       },
     }),
-    new PreloadWebpackPlugin({
-      rel: 'prefetch',
-      include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
-    }),
+    // new PreloadWebpackPlugin({
+    //   rel: 'prefetch',
+    //   include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
+    // }),
     new PreloadWebpackPlugin({
       rel: 'preload',
       as: 'font',
