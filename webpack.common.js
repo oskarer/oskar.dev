@@ -7,8 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin')
-  .default;
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -73,7 +71,6 @@ module.exports = {
       include: 'allAssets',
       fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
     }),
-    new HTMLInlineCSSWebpackPlugin(),
     new CleanWebpackPlugin(),
     new PurgecssPlugin({
       paths: [...glob.sync('./src/**/**/*', { nodir: true })],
