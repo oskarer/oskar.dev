@@ -7,7 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -60,25 +59,15 @@ module.exports = {
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
+      scriptLoading: 'defer',
+      // chunks: ['main'],
     }),
     new MiniCssExtractPlugin(),
-    new HtmlCriticalWebpackPlugin({
-      base: path.resolve(__dirname, 'build'),
-      src: 'index.html',
-      dest: 'index.html',
-      inline: true,
-      minify: true,
-      extract: true,
-      width: 375,
-      height: 565,
-      penthouse: {
-        blockJSRequests: false,
-      },
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as: 'script',
+      include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
     }),
-    // new PreloadWebpackPlugin({
-    //   rel: 'prefetch',
-    //   include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
-    // }),
     new PreloadWebpackPlugin({
       rel: 'preload',
       as: 'font',
