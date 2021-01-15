@@ -51,7 +51,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -59,20 +59,20 @@ module.exports = {
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
-      scriptLoading: 'defer',
-      // chunks: ['main'],
+      // scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin(),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'script',
-      include: ['vendors~age', 'vendors~emojione', 'age', 'emojione'],
-    }),
     new PreloadWebpackPlugin({
       rel: 'preload',
       as: 'font',
       include: 'allAssets',
       fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as: 'image',
+      include: 'allAssets',
+      fileWhitelist: [/\.webp/],
     }),
     new CleanWebpackPlugin(),
     new PurgecssPlugin({
