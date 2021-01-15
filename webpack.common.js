@@ -51,7 +51,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
-    filename: '[name].[contenthash].js',
+    filename: '[name].[hash].js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
