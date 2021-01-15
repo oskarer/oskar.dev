@@ -59,7 +59,7 @@ module.exports = {
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
-      // scriptLoading: 'defer',
+      scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin(),
     new PreloadWebpackPlugin({
