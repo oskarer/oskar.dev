@@ -95,7 +95,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section experience">
         <div className="container is-narrow timeline-container box">
           <div
             className="columns is-centered"
@@ -151,7 +151,7 @@ function App() {
           />
         </div>
       </section>
-      <section className="section">
+      <section className="section experience">
         <div className="container is-narrow">
           <h2 className="title has-text-centered">
             Quick facts about me
