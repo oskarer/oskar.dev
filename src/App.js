@@ -7,6 +7,8 @@ import TimelineEntry from './components/TimelineEntry';
 import samlyImage from './images/samly.webp';
 import inforImage from './images/infor.webp';
 import liuImage from './images/liu.webp';
+import ethImage from './images/eth.webp';
+import teamtailorImage from './images/teamtailor.webp';
 import meImage from './images/me.webp';
 
 import FrontImage from './images/front.svg';
@@ -18,6 +20,8 @@ const Age = React.lazy(() =>
 );
 
 function App() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <Helmet
@@ -53,7 +57,7 @@ function App() {
           },
           {
             name: `twitter:title`,
-            content: 'oskar.deb',
+            content: 'oskar.dev',
           },
           {
             name: `twitter:description`,
@@ -65,9 +69,7 @@ function App() {
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-1">Hi! I'm Oskar</h1>
-            <h2 className="subtitle is-3">
-              I engineer frontend applications
-            </h2>
+            <h2 className="subtitle is-3">I like to build stuff</h2>
           </div>
         </div>
         <div className="hero-foot">
@@ -79,17 +81,15 @@ function App() {
           <div className="columns is-centered">
             <div className="column is-three-fifths">
               <h4 className="title is-4 has-text-light">
-                I really enjoy building great apps, maybe we can work
-                together?
+                Full stack developer with a frontend focus
               </h4>
               <p className="has-text-light">
-                During the last years I have worked remotely on
-                several frontend web projects. I'm comfortable taking
-                responsibility and ownership of a project, finding the
-                right tools for the job and turning requirements into
-                a good user experience. While I'm not a designer
-                myself I can quite easily take an rough design idea
-                and turn it into something complete.
+                I'm comfortable taking responsibility and ownership of
+                a project, finding the right tools for the job and
+                turning requirements into a good user experience.
+                While I'm not a designer myself I can quite easily
+                take an rough design idea and turn it into something
+                complete.
               </p>
             </div>
           </div>
@@ -103,15 +103,30 @@ function App() {
           >
             <div className="column is-three-fifths">
               <h1 className="subtitle is-3 has-text-centered experience-title">
-                4+ years experience building frontend apps that are
-                well-tested and maintainable
+                {currentYear - 2015}+ years experience building apps
+                that are well-tested and maintainable
               </h1>
             </div>
           </div>
           <TimelineEntry
+            image={
+              <figure className="image" style={{ maxWidth: '100px' }}>
+                <img src={teamtailorImage} alt="Teamtailor" />
+              </figure>
+            }
+            time="2019-"
+            title="Teamtailor"
+            text="Building the best candidate and recruiter experience out there. Doing magic in our majestic Ruby on Rails & Ember app."
+          />
+          <TimelineEntry
+            image={
+              <figure className="image" style={{ maxWidth: '120px' }}>
+                <img src={ethImage} alt="Ethereum" />
+              </figure>
+            }
             time="2017-2019"
             title="Cryptocurrency exchange"
-            text="Architected and built the frontend for a real-time cryptocurrency exchange. As the sole frontend developer I was responsible for turning existing designs into a well-optimized PWA for both mobile and desktop. I also designed test suites for REST/Websocket APIs and browser automation."
+            text="Architected and built the frontend for a real-time cryptocurrency exchange. As the sole frontend developer I was responsible for turning existing designs into a well-optimized PWA for both mobile and desktop."
           />
           <TimelineEntry
             image={
