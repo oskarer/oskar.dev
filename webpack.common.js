@@ -1,12 +1,7 @@
 const path = require('path');
-const glob = require('glob-all');
-const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 let BundleAnalyzerPlugin;
 if (process.env.ANALYZE) {
@@ -50,7 +45,6 @@ module.exports = {
     filename: '[name].[contenthash].js',
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
@@ -58,21 +52,5 @@ module.exports = {
       scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin(),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'font',
-      include: 'allAssets',
-      fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
-    }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'image',
-      include: 'allAssets',
-      fileWhitelist: [/\.webp/],
-    }),
-    new CleanWebpackPlugin(),
-    new PurgecssPlugin({
-      paths: [...glob.sync('./src/**/**/*', { nodir: true })],
-    }),
   ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
 };
