@@ -21,7 +21,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: 'babel-loader',
       },
       {
         test: /\.s[ac]ss$/i,
@@ -32,16 +32,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|webp|jpg|jpeg|gif)$/i,
-        loader: 'file-loader',
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=[name].[ext]',
+        test: /\.(jpe?g|png|webp|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: '@svgr/webpack',
       },
     ],
   },
@@ -51,10 +47,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
-    filename: '[name].[hash].js',
+    filename: '[name].[contenthash].js',
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
@@ -79,8 +75,4 @@ module.exports = {
       paths: [...glob.sync('./src/**/**/*', { nodir: true })],
     }),
   ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
-  devServer: {
-    contentBase: './build',
-    hot: true,
-  },
 };
