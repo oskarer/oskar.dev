@@ -83,9 +83,9 @@ function App() {
       </section>
       <section className="flex justify-center pb-60 pt-14 px-6 text-center text-gray-200 bg-dark-bg lg:pb-80 lg:pt-28">
         <div className="max-w-[800px]">
-          <h4 className="mb-4 text-3xl font-black">
+          <h1 className="mb-4 text-3xl font-black">
             Full stack developer with a frontend focus
-          </h4>
+          </h1>
           <p>
             I'm comfortable taking responsibility and ownership of a
             project, finding the right tools for the job and turning
