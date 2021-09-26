@@ -1,10 +1,8 @@
 const path = require('path');
-const glob = require('glob-all');
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
@@ -28,9 +26,6 @@ module.exports = {
       fileWhitelist: [/\.webp/],
     }),
     new CleanWebpackPlugin(),
-    new PurgecssPlugin({
-      paths: [...glob.sync('./src/**/**/*', { nodir: true })],
-    }),
     new HtmlCriticalWebpackPlugin({
       base: path.resolve(__dirname, 'build'),
       src: 'index.html',
