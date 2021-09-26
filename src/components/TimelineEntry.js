@@ -1,12 +1,14 @@
 import React from 'react';
 
 const TimelineEntry = ({ image, time, title, text }) => (
-  <div className="columns entry">
-    <div className="column is-4 is-offset-1">{image}</div>
-    <div className="column is-1 is-paddingless timeline" />
-    <div className="column is-5">
-      <h1 className="title is-4">{title}</h1>
-      <h2 className="subtitle is-5">{time}</h2>
+  <div className="flex flex-col md:flex-row">
+    <div className="flex flex-1 justify-center mb-4 lg:mb-0">
+      {image}
+    </div>
+    <div className="w-[190px] timeline hidden md:block" />
+    <div className="flex-1 mb-8 lg:mb-20">
+      <h1 className="text-2xl font-black">{title}</h1>
+      <h2 className="mb-6 text-xl font-normal">{time}</h2>
       <p>{text}</p>
     </div>
   </div>

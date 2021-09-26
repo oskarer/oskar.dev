@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import Helmet from 'react-helmet';
 
 import Emoji from './components/Emoji';
+import Fact from './components/Fact';
 import TimelineEntry from './components/TimelineEntry';
 
 import samlyImage from './images/samly.webp';
@@ -65,49 +66,41 @@ function App() {
           },
         ].concat([])}
       />
-      <section className="hero is-fullheight">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title is-1">Hi! I'm Oskar</h1>
-            <h2 className="subtitle is-3">I like to build stuff</h2>
+      <section className="flex flex-col items-stretch justify-between h-screen bg-light-bg">
+        <div className="flex flex-col flex-grow justify-center p-4 lg:p-16">
+          <div className="lg:mt-[150px] lg:ml-[50px]">
+            <h1 className="mb-4 text-5xl font-black">
+              Hi! I'm Oskar
+            </h1>
+            <h2 className="text-3xl font-normal">
+              I like to build stuff
+            </h2>
           </div>
         </div>
-        <div className="hero-foot">
+        <div className="flex-none">
           <FrontImage />
         </div>
       </section>
-      <section className="section info">
-        <div className="container has-text-centered">
-          <div className="columns is-centered">
-            <div className="column is-three-fifths">
-              <h4 className="title is-4 has-text-light">
-                Full stack developer with a frontend focus
-              </h4>
-              <p className="has-text-light">
-                I'm comfortable taking responsibility and ownership of
-                a project, finding the right tools for the job and
-                turning requirements into a good user experience.
-                While I'm not a designer myself I can quite easily
-                take an rough design idea and turn it into something
-                complete.
-              </p>
-            </div>
-          </div>
+      <section className="flex justify-center pb-60 pt-14 px-6 text-center text-gray-200 bg-dark-bg lg:pb-80 lg:pt-28">
+        <div className="max-w-[800px]">
+          <h4 className="mb-4 text-3xl font-black">
+            Full stack developer with a frontend focus
+          </h4>
+          <p>
+            I'm comfortable taking responsibility and ownership of a
+            project, finding the right tools for the job and turning
+            requirements into a good user experience. While I'm not a
+            designer myself I can quite easily take an rough design
+            idea and turn it into something complete.
+          </p>
         </div>
       </section>
-      <section className="section experience">
-        <div className="container is-narrow timeline-container box">
-          <div
-            className="columns is-centered"
-            style={{ margin: '0 0 3rem 0' }}
-          >
-            <div className="column is-three-fifths">
-              <h1 className="subtitle is-3 has-text-centered experience-title">
-                {currentYear - 2015}+ years experience building apps
-                that are well-tested and maintainable
-              </h1>
-            </div>
-          </div>
+      <section className="px-6 py-12 bg-white lg:px-12">
+        <div className="lg:max-w-[1200px] xl:max-w-[1344px] -mt-60 mx-auto px-6 py-12 bg-white border border-gray-200 rounded-lg shadow-md lg:px-36">
+          <h1 className="max-w-[750px] mb-20 mx-auto text-center text-3xl font-normal">
+            {currentYear - 2015}+ years experience building apps that
+            are well-tested and maintainable
+          </h1>
           <TimelineEntry
             image={
               <figure className="image" style={{ maxWidth: '100px' }}>
@@ -166,76 +159,54 @@ function App() {
           />
         </div>
       </section>
-      <section className="section experience">
-        <div className="container is-narrow">
-          <h2 className="title has-text-centered">
-            Quick facts about me
-          </h2>
-          <div className="columns is-centered facts">
-            <div className="column is-3 has-text-centered">
-              {/*<h5 className="title is-6">Personal</h5>*/}
-              <div className="content">
-                <p>
-                  <Emoji text=":older_man:" />
-                  <Suspense fallback={<></>}>
-                    <Age />
-                  </Suspense>{' '}
-                  years old
-                </p>
-                <p>
-                  <Emoji text=":snowman:" /> I live in Sweden
-                </p>
-                <p>
-                  <Emoji text=":deciduous_tree:" /> Enjoys nature
-                </p>
-                <p>
-                  <Emoji text=":minibus:" /> Part-time vanlifer
-                </p>
-              </div>
-            </div>
-            <div className="column is-3 is-offset-1 has-text-centered">
-              {/*<h5 className="title is-6">Code</h5>*/}
-              <div className="content">
-                <p>
-                  <Emoji text=":rocket:" /> Longtime (in
-                  Javascript-time) React developer
-                </p>
-                <p>
-                  <Emoji text=":bomb:" /> I think tests are important
-                </p>
-                <p>
-                  <Emoji text=":zap:" /> Performance junkie
-                </p>
-                <p>
-                  <Emoji text=":chart_with_downwards_trend:" /> Really
-                  excited about blockchain tech and decentralization
-                </p>
-              </div>
-            </div>
+      <section className="px-6 bg-white">
+        <h2 className="pt-6 text-center text-3xl font-black">
+          Quick facts about me
+        </h2>
+        <div className="gap-x-[200px] flex flex-wrap gap-y-6 justify-center pb-20 pt-14">
+          <div className="flex flex-col gap-y-6">
+            <Fact emoji="older_man">
+              <Suspense fallback={<></>}>
+                <Age />
+              </Suspense>{' '}
+              years old
+            </Fact>
+            <Fact emoji="snowman">I live in Sweden</Fact>
+            <Fact emoji="deciduous_tree">Enjoys nature</Fact>
+            <Fact emoji="minibus">Part-time vanlifer</Fact>
+          </div>
+          <div className="max-w-[300px] flex flex-col gap-y-6">
+            <Fact emoji="rocket">
+              Longtime (in Javascript-time) React developer
+            </Fact>
+            <Fact emoji="bomb">I think tests are important</Fact>
+            <Fact emoji="zap">Performance junkie</Fact>
+            <Fact emoji="chart_with_downwards_trend">
+              Really excited about blockchain tech and
+              decentralization
+            </Fact>
           </div>
         </div>
       </section>
-      <section className="section footer">
-        <div className="container is-narrow has-text-centered has-text-light">
-          <div className="columns">
-            <div className="column is-6 is-offset-3">
-              <figure
-                className="image is-rounded"
-                style={{ maxWidth: '150px' }}
-              >
-                <img src={meImage} alt="Me" />
-              </figure>
-              <p>
-                I'm constantly exploring and messing around with new
-                technologies and not afraid of throwing myself into
-                unknown areas. Got a challenge for me? Lets chat!
-              </p>
-              <a className="is-size-3" href="mailto:hello@oskar.dev">
-                hello@oskar.dev
-              </a>
-            </div>
-          </div>
-        </div>
+      <section className="flex flex-col items-center px-8 py-24 text-center bg-dark-bg">
+        <figure>
+          <img
+            src={meImage}
+            alt="Me"
+            className="max-w-[150px] mb-10 rounded-full"
+          />
+        </figure>
+        <p className="max-w-[600px] mb-10 text-gray-200">
+          I'm constantly exploring and messing around with new
+          technologies and not afraid of throwing myself into unknown
+          areas. Got a challenge for me? Lets chat!
+        </p>
+        <a
+          className="text-pop text-3xl"
+          href="mailto:hello@oskar.dev"
+        >
+          hello@oskar.dev
+        </a>
       </section>
     </>
   );

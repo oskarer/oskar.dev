@@ -4,9 +4,9 @@ const Emojione = React.lazy(() =>
   import(/* webpackChunkName: 'emojione' */ '../utils/emojione'),
 );
 
-const Emoji = ({ text }) => (
+const Emoji = ({ text, className }) => (
   <Suspense fallback={<></>}>
-    <Emojione text={text} />
+    <Emojione text={text} className={className} />
   </Suspense>
 );
 
