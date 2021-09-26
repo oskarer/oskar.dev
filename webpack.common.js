@@ -60,7 +60,7 @@ module.exports = {
       title: 'oskar.dev',
       favicon: './src/images/favicon.ico',
       template: './src/index.html',
-      scriptLoading: 'blocking',
+      scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin(),
   ].concat(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
