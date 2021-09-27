@@ -3,7 +3,7 @@
 [![Lighthouse Performance Badge](./lighthouse_badges/lighthouse_performance.svg)](https://web.dev/measure/)
 [![Lighthouse SEO Badge](./lighthouse_badges/lighthouse_seo.svg)](https://web.dev/measure/)
 
-# oskar.dev
+# [oskar.dev](https://oskar.dev)
 
 Site about some programmer. Made in React and Tailwind CSS (with JIT compilation 🎉).
 
