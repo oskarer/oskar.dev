@@ -5,6 +5,6 @@
 
 # [oskar.dev](https://oskar.dev)
 
-Site about some programmer. Made in React and Tailwind CSS (with JIT compilation 🎉).
+Made in React and Tailwind CSS (with JIT compilation 🎉).
 
 My goal was to make a simple and fast site with the techniques I know. It could have been server rendered and whatnot but I think a properly code splitted React app with preloaded assets is 👌.
