@@ -1,7 +1,6 @@
-import React, { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import Helmet from 'react-helmet';
 
-import Emoji from './components/Emoji';
 import Fact from './components/Fact';
 import TimelineEntry from './components/TimelineEntry';
 
@@ -16,7 +15,7 @@ import FrontImage from './images/front.svg';
 
 import './styles.scss';
 
-const Age = React.lazy(() =>
+const Age = lazy(() =>
   import(/* webpackChunkName: 'age' */ './components/Age'),
 );
 

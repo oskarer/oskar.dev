@@ -1,4 +1,3 @@
-import React from 'react';
 import Emoji from './Emoji';
 
 const Fact = ({ emoji, children }) => (

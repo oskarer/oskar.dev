@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
-const Emojione = React.lazy(() =>
+const Emojione = lazy(() =>
   import(/* webpackChunkName: 'emojione' */ '../utils/emojione'),
 );
 
