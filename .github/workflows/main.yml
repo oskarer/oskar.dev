@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -15,19 +15,17 @@ jobs:
         with:
           cmd: install
       - name: Waiting for Netlify Preview
-        uses: kamranayub/wait-for-netlify-action@2.0.3
+        uses: kamranayub/wait-for-netlify-action@v2.0.3
         id: wait-for-netflify-preview
         with:
-          site_name: "oskar-dev"
+          site_name: 'oskar-dev'
           max_timeout: 60
         env:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
       - name: Create Percy snapshots file
-        uses: "finnp/create-file-action@master"
+        uses: 'finnp/create-file-action@master'
         env:
-          FILE_NAME: "snapshots.yml"
-          FILE_DATA: "- ${{ steps.wait-for-netflify-preview.outputs.url }}"
+          FILE_NAME: 'snapshots.yml'
+          FILE_DATA: '- ${{ steps.wait-for-netflify-preview.outputs.url }}'
       - name: Run Percy
         run: yarn percy snapshot snapshots.yml
-      
-
