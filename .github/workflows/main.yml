@@ -29,3 +29,5 @@ jobs:
           FILE_DATA: '- ${{ steps.wait-for-netflify-preview.outputs.url }}'
       - name: Run Percy
         run: yarn percy snapshot snapshots.yml
+        env:
+          PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
