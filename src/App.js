@@ -72,7 +72,7 @@ function App() {
               Hi! I'm Oskar
             </h1>
             <h2 className="text-3xl font-normal">
-              I like to build stuff
+              I like to build cool stuff
             </h2>
           </div>
         </div>
