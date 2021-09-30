@@ -1,9 +1,7 @@
-const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -26,19 +24,6 @@ module.exports = {
       fileWhitelist: [/\.webp/],
     }),
     new CleanWebpackPlugin(),
-    // new HtmlCriticalWebpackPlugin({
-    //   base: path.resolve(__dirname, 'build'),
-    //   src: 'index.html',
-    //   dest: 'index.html',
-    //   inline: true,
-    //   minify: true,
-    //   extract: true,
-    //   width: 375,
-    //   height: 565,
-    //   penthouse: {
-    //     blockJSRequests: false,
-    //   },
-    // }),
     new Dotenv({
       path: './.env.production',
     }),
