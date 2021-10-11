@@ -35,3 +35,8 @@ jobs:
         run: npx percy snapshot snapshots.yml
         env:
           PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
+      - name: Auto merge
+        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          github-token: ${{ secrets.MY_TOKEN }}
