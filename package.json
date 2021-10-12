@@ -49,7 +49,7 @@
     "eslint-plugin-react-hooks": "^4.0.0",
     "prettier": "^2.4.1",
     "prettier-plugin-tailwind": "^2.2.12",
-    "webpack-bundle-analyzer": "^4.3.0"
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.js --env dev",
