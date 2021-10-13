@@ -27,7 +27,7 @@
     "react-helmet": "^6.1.0",
     "react-hot-loader": "^4.12.21",
     "sass": "^1.32.2",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "^12.2.0",
     "tailwindcss": "^2.2.16",
     "terser-webpack-plugin": "5.2.4",
     "webpack": "^5.58.1",
@@ -36,20 +36,20 @@
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "@percy/cli": "^1.0.0-beta.68",
+    "@percy/cli": "^1.0.0-beta.69",
     "@vue/preload-webpack-plugin": "^2.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.0.0",
     "prettier": "^2.4.1",
     "prettier-plugin-tailwind": "^2.2.12",
-    "webpack-bundle-analyzer": "^4.3.0"
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.js --env dev",
