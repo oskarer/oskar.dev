@@ -118,7 +118,7 @@ function App() {
             }
             time="2017-2019"
             title="Cryptocurrency exchange"
-            text="Architected and built the frontend for a real-time cryptocurrency exchange. As the sole frontend developer I was responsible for turning existing designs into a well-optimized PWA for both mobile and desktop."
+            text="Architected and built the React frontend for a real-time cryptocurrency exchange. As the sole frontend developer I was responsible for turning existing designs into a well-optimized PWA for both mobile and desktop."
           />
           <TimelineEntry
             image={
@@ -128,7 +128,7 @@ function App() {
             }
             time="2015-2017"
             title="Infor"
-            text="As part of a small team I helped lay the groundwork for developing offline-first PWA's and Cordova apps for retail applications."
+            text="As part of a small team I helped lay the groundwork for developing offline-first React PWA's and Cordova apps for retail applications."
           />
           <TimelineEntry
             image={
