@@ -103,7 +103,13 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={teamtailorImage} width="100" height="100" alt="Teamtailor" />
+                <img
+                  src={teamtailorImage}
+                  width="100"
+                  height="100"
+                  alt="Teamtailor"
+                  loading="lazy"
+                />
               </figure>
             }
             time="2019-"
@@ -113,7 +119,13 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={ethImage} width="120" height="120" alt="Ethereum" />
+                <img
+                  src={ethImage}
+                  width="120"
+                  height="120"
+                  alt="Ethereum"
+                  loading="lazy"
+                />
               </figure>
             }
             time="2017-2019"
@@ -123,7 +135,13 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={inforImage} width="100" height="100" alt="Infor" />
+                <img
+                  src={inforImage}
+                  width="100"
+                  height="100"
+                  alt="Infor"
+                  loading="lazy"
+                />
               </figure>
             }
             time="2015-2017"
@@ -133,7 +151,13 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={samlyImage} width="250" height="123" alt="Samly" />
+                <img
+                  src={samlyImage}
+                  width="250"
+                  height="123"
+                  alt="Samly"
+                  loading="lazy"
+                />
               </figure>
             }
             time="2013-2015"
@@ -143,7 +167,13 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={liuImage} width="250" height="90" alt="LiU" />
+                <img
+                  src={liuImage}
+                  width="250"
+                  height="90"
+                  alt="LiU"
+                  loading="lazy"
+                />
               </figure>
             }
             time="2010-2015"
@@ -185,6 +215,7 @@ function App() {
         <figure>
           <img
             src={meImage}
+            loading="lazy"
             alt="Me"
             width="150"
             height="150"
