@@ -6,7 +6,11 @@ const Emojione = lazy(() =>
 
 const Emoji = ({ text, className }) => (
   <Suspense fallback={<></>}>
-    <Emojione text={text} className={className} />
+    <Emojione
+      text={text}
+      className={className}
+      options={{ props: { loading: 'lazy' } }}
+    />
   </Suspense>
 );
 
