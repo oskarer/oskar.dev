@@ -47,6 +47,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.0.0",
+    "lighthouse-badges": "^1.1.13",
     "prettier": "^2.4.1",
     "prettier-plugin-tailwind": "^2.2.12",
     "webpack-bundle-analyzer": "^4.5.0"
@@ -55,7 +56,7 @@
     "start": "webpack serve --config webpack.config.js --env dev",
     "build": "webpack --config webpack.config.js --env prod",
     "analyze": "cross-env ANALYZE=1 yarn build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lighthouse": "yarn lighthouse-badges --urls https://oskar.dev -o lighthouse_badges"
   },
   "eslintConfig": {
     "extends": [
