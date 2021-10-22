@@ -53,7 +53,7 @@ function App() {
           },
           {
             name: `twitter:creator`,
-            content: '@oskarer',
+            content: '@oskar_eriksson9',
           },
           {
             name: `twitter:title`,
@@ -102,7 +102,7 @@ function App() {
           </h1>
           <TimelineEntry
             image={
-              <figure className="image" style={{ maxWidth: '100px' }}>
+              <figure className="w-[100px] h-[100px]">
                 <img src={teamtailorImage} alt="Teamtailor" />
               </figure>
             }
@@ -112,7 +112,7 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="image" style={{ maxWidth: '120px' }}>
+              <figure className="w-[120px] h-[120px]">
                 <img src={ethImage} alt="Ethereum" />
               </figure>
             }
@@ -122,7 +122,7 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="image" style={{ maxWidth: '100px' }}>
+              <figure className="w-[100px] h-[100px]">
                 <img src={inforImage} alt="Infor" />
               </figure>
             }
@@ -132,10 +132,7 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure
-                className="image is-paddingless"
-                style={{ maxWidth: '250px' }}
-              >
+              <figure className="w-[250px] h-[123px]">
                 <img src={samlyImage} alt="Samly" />
               </figure>
             }
@@ -145,10 +142,7 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure
-                className="image is-paddingless"
-                style={{ maxWidth: '250px' }}
-              >
+              <figure className="w-[250px] h-[90px]">
                 <img src={liuImage} alt="LiU" />
               </figure>
             }
