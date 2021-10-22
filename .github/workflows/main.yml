@@ -23,7 +23,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           site_name: 'oskar-dev'
-          max_timeout: 60
+          max_timeout: 120
         env:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
       - name: Create Percy snapshots file
