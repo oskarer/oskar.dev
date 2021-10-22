@@ -102,8 +102,8 @@ function App() {
           </h1>
           <TimelineEntry
             image={
-              <figure className="w-[100px] h-[100px]">
-                <img src={teamtailorImage} alt="Teamtailor" />
+              <figure>
+                <img src={teamtailorImage} className="w-[100px] h-[100px]" alt="Teamtailor" />
               </figure>
             }
             time="2019-"
@@ -112,8 +112,8 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="w-[120px] h-[120px]">
-                <img src={ethImage} alt="Ethereum" />
+              <figure>
+                <img src={ethImage} className="w-[120px] h-[120px]" alt="Ethereum" />
               </figure>
             }
             time="2017-2019"
@@ -122,8 +122,8 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="w-[100px] h-[100px]">
-                <img src={inforImage} alt="Infor" />
+              <figure>
+                <img src={inforImage} className="w-[100px] h-[100px]" alt="Infor" />
               </figure>
             }
             time="2015-2017"
@@ -132,8 +132,8 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="w-[250px] h-[123px]">
-                <img src={samlyImage} alt="Samly" />
+              <figure>
+                <img src={samlyImage} className="w-[250px] h-[123px]" alt="Samly" />
               </figure>
             }
             time="2013-2015"
@@ -142,8 +142,8 @@ function App() {
           />
           <TimelineEntry
             image={
-              <figure className="w-[250px] h-[90px]">
-                <img src={liuImage} alt="LiU" />
+              <figure>
+                <img src={liuImage} className="w-[250px] h-[90px]" alt="LiU" />
               </figure>
             }
             time="2010-2015"
@@ -186,7 +186,7 @@ function App() {
           <img
             src={meImage}
             alt="Me"
-            className="max-w-[150px] mb-10 rounded-full"
+            className="w-[150px] h-[150px] mb-10 rounded-full"
           />
         </figure>
         <p className="max-w-[600px] mb-10 text-gray-200">
