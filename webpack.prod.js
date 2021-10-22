@@ -17,12 +17,6 @@ module.exports = {
       include: 'allAssets',
       fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
     }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'image',
-      include: 'allAssets',
-      fileWhitelist: [/\.webp/],
-    }),
     new CleanWebpackPlugin(),
     new Dotenv({
       path: './.env.production',
