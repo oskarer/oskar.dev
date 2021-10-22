@@ -103,7 +103,7 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={teamtailorImage} className="w-[100px] h-[100px]" alt="Teamtailor" />
+                <img src={teamtailorImage} width="100" height="100" alt="Teamtailor" />
               </figure>
             }
             time="2019-"
@@ -113,7 +113,7 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={ethImage} className="w-[120px] h-[120px]" alt="Ethereum" />
+                <img src={ethImage} width="120" height="120" alt="Ethereum" />
               </figure>
             }
             time="2017-2019"
@@ -123,7 +123,7 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={inforImage} className="w-[100px] h-[100px]" alt="Infor" />
+                <img src={inforImage} width="100" height="100" alt="Infor" />
               </figure>
             }
             time="2015-2017"
@@ -133,7 +133,7 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={samlyImage} className="w-[250px] h-[123px]" alt="Samly" />
+                <img src={samlyImage} width="250" height="123" alt="Samly" />
               </figure>
             }
             time="2013-2015"
@@ -143,7 +143,7 @@ function App() {
           <TimelineEntry
             image={
               <figure>
-                <img src={liuImage} className="w-[250px] h-[90px]" alt="LiU" />
+                <img src={liuImage} width="250" height="90" alt="LiU" />
               </figure>
             }
             time="2010-2015"
@@ -186,7 +186,9 @@ function App() {
           <img
             src={meImage}
             alt="Me"
-            className="w-[150px] h-[150px] mb-10 rounded-full"
+            width="150"
+            height="150"
+            className="mb-10 rounded-full"
           />
         </figure>
         <p className="max-w-[600px] mb-10 text-gray-200">
