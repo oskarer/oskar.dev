@@ -1,7 +1,8 @@
-import { Suspense, lazy } from 'react';
 import Helmet from 'react-helmet';
+import { useInView } from 'react-intersection-observer';
 
-import Fact from './components/Fact';
+import Facts from './sections/Facts';
+
 import TimelineEntry from './components/TimelineEntry';
 
 import samlyImage from './images/samly.webp';
@@ -15,12 +16,11 @@ import FrontImage from './images/front.svg';
 
 import './styles.scss';
 
-const Age = lazy(() =>
-  import(/* webpackChunkName: 'age' */ './components/Age'),
-);
-
 function App() {
   const currentYear = new Date().getFullYear();
+  const { ref: inviewRef, inView: showContent } = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <>
@@ -94,7 +94,10 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="px-6 py-12 bg-white lg:px-12">
+      <section
+        ref={inviewRef}
+        className="px-6 py-12 bg-white lg:px-12"
+      >
         <div className="lg:max-w-[1200px] xl:max-w-[1344px] -mt-60 mx-auto px-6 py-12 bg-white border border-gray-200 rounded-lg shadow-md lg:px-36">
           <h1 className="max-w-[750px] mb-20 mx-auto text-center text-3xl font-normal">
             {currentYear - 2015}+ years experience building apps that
@@ -182,35 +185,7 @@ function App() {
           />
         </div>
       </section>
-      <section className="px-6 bg-white">
-        <h2 className="pt-6 text-center text-3xl font-black">
-          Quick facts about me
-        </h2>
-        <div className="gap-x-[200px] flex flex-wrap gap-y-6 justify-center pb-20 pt-14">
-          <div className="flex flex-col gap-y-6">
-            <Fact emoji="older_man">
-              <Suspense fallback={<></>}>
-                <Age />
-              </Suspense>{' '}
-              years old
-            </Fact>
-            <Fact emoji="snowman">I live in Sweden</Fact>
-            <Fact emoji="deciduous_tree">Enjoys nature</Fact>
-            <Fact emoji="minibus">Part-time vanlifer</Fact>
-          </div>
-          <div className="max-w-[300px] flex flex-col gap-y-6">
-            <Fact emoji="rocket">
-              Longtime (in Javascript-time) React developer
-            </Fact>
-            <Fact emoji="bomb">I think tests are important</Fact>
-            <Fact emoji="zap">Performance junkie</Fact>
-            <Fact emoji="chart_with_downwards_trend">
-              Really excited about blockchain tech and
-              decentralization
-            </Fact>
-          </div>
-        </div>
-      </section>
+      {showContent && <Facts />}
       <section className="flex flex-col items-center px-8 py-24 text-center bg-dark-bg">
         <figure>
           <img
