@@ -68,9 +68,7 @@ function App() {
       <section className="flex flex-col items-stretch justify-between h-screen bg-light-bg">
         <div className="flex flex-col flex-grow justify-center p-4 lg:p-16">
           <div className="lg:mt-[150px] lg:ml-[50px]">
-            <h1 className="mb-4 text-5xl font-black">
-              Hi! I'm Oskar
-            </h1>
+            <h1 className="mb-4 text-5xl font-bold">Hi! I'm Oskar</h1>
             <h2 className="text-3xl font-normal">
               I like to build stuff
             </h2>
@@ -82,7 +80,7 @@ function App() {
       </section>
       <section className="flex justify-center pb-60 pt-14 px-6 text-center text-gray-200 bg-dark-bg lg:pb-80 lg:pt-28">
         <div className="max-w-[800px]">
-          <h1 className="mb-4 text-3xl font-black">
+          <h1 className="mb-4 text-3xl font-bold">
             Full stack developer with a frontend focus
           </h1>
           <p>

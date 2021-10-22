@@ -4,29 +4,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-$inter-font-path: '~inter-ui/Inter (web latin)';
-$inter-font-display: swap;
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: $inter-font-display;
-  src: url('#{$inter-font-path}/Inter-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  font-display: $inter-font-display;
-  src: url('#{$inter-font-path}/Inter-Black.woff2') format('woff2');
-}
-
-$family-sans-serif: 'Inter';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
 
 $timelineStepWidth: 30px;
 $timelineStepOffset: 1.5rem;
+
+html {
+  font-family: 'Inter', sans-serif;
+}
 
 .timeline {
   position: relative;
