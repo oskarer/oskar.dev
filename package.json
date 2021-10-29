@@ -57,7 +57,8 @@
     "start": "webpack serve --config webpack.config.js --env dev",
     "build": "webpack --config webpack.config.js --env prod",
     "analyze": "cross-env ANALYZE=1 yarn build",
-    "lighthouse": "yarn lighthouse-badges --urls https://oskar.dev -o lighthouse_badges"
+    "lighthouse": "yarn lighthouse-badges --urls https://oskar.dev -o lighthouse_badges",
+    "percy-baseline": "yarn percy snapshot snapshots.yml"
   },
   "eslintConfig": {
     "extends": [
