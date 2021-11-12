@@ -66,7 +66,7 @@ function App() {
         ].concat([])}
       />
       <section className="flex flex-col items-stretch justify-between h-screen bg-light-bg">
-        <div className="flex flex-col flex-grow justify-center p-4 lg:p-16">
+        <div className="flex flex-col justify-center flex-grow p-4 lg:p-16">
           <div className="lg:mt-[150px] lg:ml-[50px]">
             <h1 className="mb-4 text-5xl font-bold">Hi! I'm Oskar</h1>
             <h2 className="text-3xl font-normal">
@@ -78,7 +78,7 @@ function App() {
           <FrontImage />
         </div>
       </section>
-      <section className="flex justify-center pb-60 pt-14 px-6 text-center text-gray-200 bg-dark-bg lg:pb-80 lg:pt-28">
+      <section className="flex justify-center px-6 text-center text-gray-200 pb-60 pt-14 bg-dark-bg lg:pb-80 lg:pt-28">
         <div className="max-w-[800px]">
           <h1 className="mb-4 text-3xl font-bold">
             Full stack developer with a frontend focus
@@ -201,7 +201,7 @@ function App() {
           areas. Got a challenge for me? Lets chat!
         </p>
         <a
-          className="text-pop text-3xl"
+          className="text-3xl text-pop"
           href="mailto:hello@oskar.dev"
         >
           hello@oskar.dev

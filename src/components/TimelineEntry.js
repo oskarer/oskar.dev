@@ -1,6 +1,6 @@
 const TimelineEntry = ({ image, time, title, text }) => (
   <div className="flex flex-col md:flex-row">
-    <div className="flex flex-1 justify-center mb-4 lg:mb-0">
+    <div className="flex justify-center flex-1 mb-4 lg:mb-0">
       {image}
     </div>
     <div className="w-[190px] timeline hidden md:block" />

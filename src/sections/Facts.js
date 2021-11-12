@@ -10,7 +10,7 @@ const Fact = lazy(() =>
 
 export default () => (
   <section className="px-6 bg-white">
-    <h2 className="pt-6 text-center text-3xl font-bold">
+    <h2 className="pt-6 text-3xl font-bold text-center">
       Quick facts about me
     </h2>
     <div className="gap-x-[200px] flex flex-wrap gap-y-6 justify-center pb-20 pt-14">
