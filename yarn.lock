@@ -4572,15 +4572,15 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lighthouse-badges@^1.1.15:
-  version "1.1.15"
-  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.15.tgz#7046f1dfe9b413f4c2b4259679437d7fd61bee92"
-  integrity sha512-0XuQyxqB1xWQhzU3L4h0zrBLfhzvDeWHEaGLDwzYvQ76Dy1QhJ6vy/1SL2erNWJ8u7lye/VYbFd9xQvNpOJqMg==
+lighthouse-badges@^1.1.16:
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.16.tgz#39944ab4d488090a73ed332bfc89f75f55c8793f"
+  integrity sha512-EluerImgOm2sZM4z0pBrp8gi6xz2jzuKweHRjBlLsbvwbjn638h9NYDxqRw6g+Qr9tvPflrSvo1a1wZ3KeFKpw==
   dependencies:
     argparse "2.0.1"
     badge-maker "^3.3.1"
     clui "^0.3.6"
-    lighthouse "^9.0.0"
+    lighthouse "^9.1.0"
     ramda "^0.27.0"
 
 lighthouse-logger@^1.0.0, lighthouse-logger@^1.3.0:
@@ -4591,15 +4591,15 @@ lighthouse-logger@^1.0.0, lighthouse-logger@^1.3.0:
     debug "^2.6.9"
     marky "^1.2.2"
 
-lighthouse-stack-packs@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/lighthouse-stack-packs/-/lighthouse-stack-packs-1.5.0.tgz#c191f2b94db21602254baaebfb0bb90307a00ffa"
-  integrity sha512-ntVOqFsrrTQYrNf+W+sNE9GjddW+ab5QN0WrrCikjMFsUvEQ28CvT0SXcHPZXFtcsb1lMSuVaNCmEuj7oXtYGQ==
+lighthouse-stack-packs@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/lighthouse-stack-packs/-/lighthouse-stack-packs-1.6.0.tgz#f7327352089f65f4ca61135956c77b9d13f6d681"
+  integrity sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==
 
-lighthouse@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.0.0.tgz#e40bd54feb46b9477a15d85bf23af6b864582c23"
-  integrity sha512-bUgc0dQFrLx9+Vyc+sJkDp8kJvE+EpmpARypUlOKgBdTu+6fT0ceo+zSZ6CJn/fDb3rTYfByEPiuD+oik/Po+Q==
+lighthouse@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.1.0.tgz#41e544ab06231e00f50c35d878ca95aa21097c27"
+  integrity sha512-KUrEKP3KBo1c0Ao7GvWtUqQgJjblALQslOd9d0c9/rONLNM1X17+rZZv8bRS7FVmicdqlIIwGTxk1CjPTH3Vyw==
   dependencies:
     axe-core "4.2.3"
     chrome-launcher "^0.15.0"
@@ -4612,7 +4612,7 @@ lighthouse@^9.0.0:
     jpeg-js "^0.4.1"
     js-library-detector "^6.4.0"
     lighthouse-logger "^1.3.0"
-    lighthouse-stack-packs "^1.5.0"
+    lighthouse-stack-packs "^1.6.0"
     lodash.clonedeep "^4.5.0"
     lodash.get "^4.4.2"
     lodash.isequal "^4.5.0"
