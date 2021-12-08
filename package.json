@@ -28,7 +28,7 @@
     "react-hot-loader": "^4.12.21",
     "react-intersection-observer": "^8.32.5",
     "sass": "^1.44.0",
-    "sass-loader": "^12.3.0",
+    "sass-loader": "^12.4.0",
     "tailwindcss": "^2.2.19",
     "terser-webpack-plugin": "5.2.5",
     "webpack": "^5.65.0",
