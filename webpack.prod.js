@@ -1,7 +1,6 @@
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -11,12 +10,6 @@ module.exports = {
     minimizer: [new TerserPlugin()],
   },
   plugins: [
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'font',
-      include: 'allAssets',
-      fileWhitelist: [/\.(woff2?)(\?.*)?$/i],
-    }),
     new CleanWebpackPlugin(),
     new Dotenv({
       path: './.env.production',
