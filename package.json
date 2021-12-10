@@ -17,7 +17,6 @@
     "dotenv-webpack": "^7.0.3",
     "glob-all": "^3.2.1",
     "html-webpack-plugin": "5.5.0",
-    "inter-ui": "^3.15.0",
     "luxon": "^2.1.1",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss-loader": "^6.2.1",
