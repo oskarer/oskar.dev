@@ -1,7 +1,6 @@
 module.exports = {
-  purge: ['./src/**/*.js'],
+  content: ['./src/**/*.js'],
   mode: 'jit',
-  darkMode: false, // or 'media' or 'class'
   important: false,
   theme: {
     extend: {
@@ -11,9 +10,6 @@ module.exports = {
         pop: '#d47b29',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
