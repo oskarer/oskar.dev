@@ -1870,12 +1870,7 @@ autoprefixer@^10.4.0:
     picocolors "^1.0.0"
     postcss-value-parser "^4.1.0"
 
-axe-core@4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.3.tgz#2a3afc332f0031b42f602f4a3de03c211ca98f72"
-  integrity sha512-pXnVMfJKSIWU2Ml4JHP7pZEPIrgBO1Fd3WGx+fPBsS+KRGhE4vxooD8XBGWbQOIVSZsVK7pUDBBkCicNu80yzQ==
-
-axe-core@^4.3.5:
+axe-core@4.3.5, axe-core@^4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.3.5.tgz#78d6911ba317a8262bfee292aeafcc1e04b49cc5"
   integrity sha512-WKTW1+xAzhMS5dJsxWkliixlO/PqC4VhmO9T4juNYcaTg9jzWiJsou6m5pxWYGfigWbwzJWeFY6z47a+4neRXA==
@@ -4462,15 +4457,15 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lighthouse-badges@^1.1.16:
-  version "1.1.16"
-  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.16.tgz#39944ab4d488090a73ed332bfc89f75f55c8793f"
-  integrity sha512-EluerImgOm2sZM4z0pBrp8gi6xz2jzuKweHRjBlLsbvwbjn638h9NYDxqRw6g+Qr9tvPflrSvo1a1wZ3KeFKpw==
+lighthouse-badges@^1.1.17:
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.17.tgz#d79ebe171246e6748dfa826dc30f6414fbe18035"
+  integrity sha512-l2CgVYyCKRDyn1Hxtu/x+q9cYYj0bdcMpK/J55pRh6gIJDoVmyDlLWTaWiHfqp7rSrGA36iVSG8pHFTDrRZyzw==
   dependencies:
     argparse "2.0.1"
     badge-maker "^3.3.1"
     clui "^0.3.6"
-    lighthouse "^9.1.0"
+    lighthouse "^9.2.0"
     ramda "^0.27.0"
 
 lighthouse-logger@^1.0.0, lighthouse-logger@^1.3.0:
@@ -4486,12 +4481,12 @@ lighthouse-stack-packs@^1.6.0:
   resolved "https://registry.yarnpkg.com/lighthouse-stack-packs/-/lighthouse-stack-packs-1.6.0.tgz#f7327352089f65f4ca61135956c77b9d13f6d681"
   integrity sha512-isv4qY9YCiRis5Z3ijy14IUyAbl6AoD+Q8Co1t0GBBuQK2ZUTSK6mLgFd91MVJrhXaF3LXJRcO+JXaUFHedHhA==
 
-lighthouse@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.1.0.tgz#41e544ab06231e00f50c35d878ca95aa21097c27"
-  integrity sha512-KUrEKP3KBo1c0Ao7GvWtUqQgJjblALQslOd9d0c9/rONLNM1X17+rZZv8bRS7FVmicdqlIIwGTxk1CjPTH3Vyw==
+lighthouse@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.2.0.tgz#a193ddf8afe56d482b38e7b772d13f35467d44c8"
+  integrity sha512-lkD0soCiFFh1diZ1xL2R+aDO4WvSUwEF/ajNRDWWEobE9ta7Qm2EwhCMmA2v39WCI4QIBxJQ1OBNStNKaLfGCw==
   dependencies:
-    axe-core "4.2.3"
+    axe-core "4.3.5"
     chrome-launcher "^0.15.0"
     configstore "^5.0.1"
     csp_evaluator "1.1.0"
