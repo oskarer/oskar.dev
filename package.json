@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "lighthouse-badges": "^1.1.17",
+    "lighthouse-badges": "^1.1.18",
     "prettier": "^2.5.1",
     "webpack-bundle-analyzer": "^4.5.0"
   },
