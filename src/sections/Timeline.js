@@ -15,8 +15,8 @@ const Timeline = forwardRef((props, ref) => {
     <section ref={ref} className="px-6 py-12 bg-white lg:px-12">
       <div className="lg:max-w-[1200px] xl:max-w-[1344px] -mt-60 mx-auto px-6 py-12 bg-white border border-gray-200 rounded-lg shadow-md lg:px-36">
         <h1 className="max-w-[750px] mb-20 mx-auto text-center text-3xl font-normal">
-          {currentYear - 2015}+ years experience building apps that
-          are well-tested and maintainable
+          {currentYear - 2015}+ years experience building well-tested
+          and maintainable apps
         </h1>
         <TimelineEntry
           image={

@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import Timeline from './sections/Timeline';
 import Facts from './sections/Facts';
 import meImage from './images/me.webp';
+import Emoji from './components/Emoji';
 
 import FrontImage from './images/front.svg';
 
@@ -21,7 +22,7 @@ function App() {
           lang: 'en',
         }}
         title="oskar.dev"
-        titleTemplate={`Home | oskar.dev`}
+        titleTemplate="oskar.dev"
         meta={[
           {
             name: `description`,
@@ -55,7 +56,7 @@ function App() {
             name: `twitter:description`,
             content: 'Frontend engineer',
           },
-        ].concat([])}
+        ]}
       />
       <section className="flex flex-col items-stretch justify-between h-screen bg-light-bg">
         <div className="flex flex-col justify-center flex-grow p-4 lg:p-16">
@@ -70,17 +71,15 @@ function App() {
           <FrontImage />
         </div>
       </section>
-      <section className="flex justify-center px-6 text-center text-gray-200 pb-60 pt-14 bg-dark-bg lg:pb-80 lg:pt-28">
-        <div className="max-w-[800px]">
+      <section className="flex justify-center px-6 text-center text-gray-200 pb-60 pt-14 bg-dark-bg md:pb-80 md:pt-28">
+        <div className="max-w-[700px]">
           <h1 className="mb-4 text-3xl font-bold">
             Full stack developer with a frontend focus
           </h1>
           <p>
-            I'm comfortable taking responsibility and ownership of a
-            project, finding the right tools for the job and turning
-            requirements into a good user experience. While I'm not a
-            designer myself I can quite easily take an rough design
-            idea and turn it into something complete.
+            I'm driven by building innovative things that make an
+            impact. Doing that together with awesome people and cool
+            tech is <Emoji text=":fire:" imgClassName="inline" />.
           </p>
         </div>
       </section>
@@ -99,9 +98,7 @@ function App() {
           />
         </figure>
         <p className="max-w-[600px] mb-10 text-gray-200">
-          I'm constantly exploring and messing around with new
-          technologies and not afraid of throwing myself into unknown
-          areas. Got a challenge for me? Lets chat!
+          Want to talk?
         </p>
         <a
           className="text-3xl text-pop"
