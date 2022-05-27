@@ -21,7 +21,6 @@ jobs:
         uses: kamranayub/wait-for-netlify-action@v2.0.3
         id: wait-for-netflify-preview
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
           site_name: 'oskar-dev'
           max_timeout: 600
         env:
