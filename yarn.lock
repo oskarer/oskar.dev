@@ -4925,15 +4925,15 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lighthouse-badges@^1.1.21:
-  version "1.1.21"
-  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.21.tgz#86757ee3c883bfff3163d6d041b38285b99ca18d"
-  integrity sha512-OhQMRaTWujQ5Xvv9Ru2u7GHV76Kllg/oMerBT40t8EmtUYx6ZPFmBlPE++J3IJ6M8TR8FtkEJP1A6h8oTXaVYA==
+lighthouse-badges@^1.1.22:
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.22.tgz#04d86fba4d2187e0d8adf0a885665f71908fb8a1"
+  integrity sha512-vBS3y41rfDyjqMT2s6yMJlVfJdHgE31QX/dIJd7wJpM+WeLOwOSqdZ4kviaO1zUtC6oi0EVHI4FjdPrb66C+Yw==
   dependencies:
     argparse "2.0.1"
     badge-maker "^3.3.1"
     clui "^0.3.6"
-    lighthouse "^9.6.1"
+    lighthouse "^9.6.2"
     ramda "^0.28.0"
 
 lighthouse-logger@^1.0.0, lighthouse-logger@^1.3.0:
@@ -4949,10 +4949,10 @@ lighthouse-stack-packs@^1.8.1:
   resolved "https://registry.yarnpkg.com/lighthouse-stack-packs/-/lighthouse-stack-packs-1.8.1.tgz#d0772a79f5e7f933109077fb80ccdbd68a43a283"
   integrity sha512-LSCu9Ugt9NPvRfBNzAjMDLvYev9r/93OTmbIWt9iXwiCmd999I/zneRTwsFLtlQWGKwNbDHS9vXnU+KpXUb1qg==
 
-lighthouse@^9.6.1:
-  version "9.6.1"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.6.1.tgz#92ca61fb786157ac780b0322efeb90294920f536"
-  integrity sha512-d6Xp12gXxeQ2Y3/KfEzIQvRtpbugWngCFyQtghCodMzK9hbes8zcGtIVPZ+n8HXAEcRXAoNTV/AoxMnAtWwWVQ==
+lighthouse@^9.6.2:
+  version "9.6.2"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-9.6.2.tgz#e67db7246d2001a076ad43f2ace767766c3bfdf2"
+  integrity sha512-JNLDbN2v5FcKE3izld7pprWcTIRqaRz4sDTkMVtF3aRKwBc5xP+wjfwRQ0tAi1Mf7ATIF2eF20SqNwqyNLB4Jg==
   dependencies:
     "@sentry/node" "^6.17.4"
     axe-core "4.4.1"
