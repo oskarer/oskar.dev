@@ -36,7 +36,7 @@
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
-    "@percy/cli": "^1.8.0",
+    "@percy/cli": "^1.8.1",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
