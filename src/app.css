@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@300;400;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(245, 158, 11, 0.18), transparent 36%),
+    #020617;
+  color: #e2e8f0;
+  font-family: 'Sora', 'Avenir Next', 'Trebuchet MS', sans-serif;
+}
+
+.panel {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72));
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow,
+.section-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(125, 211, 252, 0.8);
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #f8fafc;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 24px rgba(14, 165, 233, 0.25);
+}
+
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  color: #e2e8f0;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', 'Consolas', monospace;
+}

@@ -1,10 +1,10 @@
-[![Lighthouse Accessibility Badge](./lighthouse_badges/lighthouse_accessibility.svg)](https://web.dev/measure/)
-[![Lighthouse Best Practices Badge](./lighthouse_badges/lighthouse_best-practices.svg)](https://web.dev/measure/)
-[![Lighthouse Performance Badge](./lighthouse_badges/lighthouse_performance.svg)](https://web.dev/measure/)
-[![Lighthouse SEO Badge](./lighthouse_badges/lighthouse_seo.svg)](https://web.dev/measure/)
+# oskar.dev
 
-# [oskar.dev](https://oskar.dev)
+Fresh Svelte 5 + Tailwind app for a personal profile page.
 
-Made in React and Tailwind CSS (with JIT compilation 🎉).
+## Scripts
 
-My goal was to make a simple and fast site with the techniques I know. It could have been server rendered but I think a properly code splitted React app is 👌.
+- `bun run dev` - start local dev server
+- `bun run build` - build production bundle
+- `bun run preview` - preview production build
+- `bun run check` - run Svelte type/syntax checks
