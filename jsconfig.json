@@ -5,7 +5,8 @@
     "module": "ESNext",
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["vite/client"]
   },
   "include": [
     "src/**/*.d.ts",
