@@ -11,6 +11,8 @@
     "check": "svelte-check --tsconfig ./jsconfig.json"
   },
   "devDependencies": {
+    "@fontsource-variable/sora": "^5.2.8",
+    "@fontsource/ibm-plex-mono": "^5.2.7",
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
     "@tailwindcss/vite": "^4.3.0",
     "svelte": "^5.56.3",
